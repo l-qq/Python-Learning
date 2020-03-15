@@ -21,9 +21,13 @@
 - [11_系统信息相关命令.html](https://l-qq.github.io/Python-Learning/课件/linux_html/linux_html/11_系统信息相关命令.html)
 - [12_其他命令.html](https://l-qq.github.io/Python-Learning/课件/linux_html/linux_html/12_其他命令.html)
 
+### Vim 操作
+
+- [Vim 指南](https://github.com/l-qq/Python-Learning/tree/master/%E8%AF%BE%E4%BB%B6/vi_markdown/markdown)
+
 ### Python 基础
 
-- [Markdown Files](./课件/python_markdown/)
+- [Markdown Files](https://github.com/l-qq/Python-Learning/tree/master/%E8%AF%BE%E4%BB%B6/python_markdown)
 
 ### Python 面向对象
 
