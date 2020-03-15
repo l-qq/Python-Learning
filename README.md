@@ -4,8 +4,6 @@
 
 ## 学习笔记
 
-- [Linux 基础](http://note.youdao.com/noteshare?id=d11a1044b9baca059b126f00f55fc152&sub=35D2BA74C1254FF39DEEF383A88E1A3B)
-
 ## 课件
 
 ### Linux 基础
@@ -22,6 +20,10 @@
 - [10_用户权限常用命令.html](https://l-qq.github.io/Python-Learning/课件/linux_html/linux_html/10_用户权限常用命令.html)
 - [11_系统信息相关命令.html](https://l-qq.github.io/Python-Learning/课件/linux_html/linux_html/11_系统信息相关命令.html)
 - [12_其他命令.html](https://l-qq.github.io/Python-Learning/课件/linux_html/linux_html/12_其他命令.html)
+
+### Python 基础
+
+- [Markdown Files](./课件/python_markdown/)
 
 ### Python 面向对象
 
