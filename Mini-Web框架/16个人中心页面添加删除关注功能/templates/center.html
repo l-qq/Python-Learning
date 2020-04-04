@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" type="text/css" href="/css/1.css" />
+
+    <script src="/js/jquery-1.12.4.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+                $("input[name='toDel']").each(function(){  
+                    var currentAdd = $(this);  
+                    currentAdd.click(function(){  
+                        code = $(this).attr("systemIdVaule"); 
+                        alert("/del/" + code + ".html"); 
+                        $.get("/del/" + code + ".html", function(data, status){
+                            alert("数据: " + data + "\n状态: " + status);
+                        });
+                        window.location.reload()
+                    });  
+                });  
+        });
+    </script>
+
+</head>
+<body>
+    <h1>
+        这是个人中心
+    </h1>
+    <p>
+        <a href="/index.html">首页</a>
+    </p>
+    <table>
+        <tbody>
+        <tr>
+            <th>序号</th>
+            <th>股票简称</th>
+            <th>涨跌幅</th>
+            <th>换手率</th>
+            <th>最新价（元）</th>
+            <th>前期高点</th>
+            <th style="color: brown;">备注信息</th>
+            <th>修改备注</th>
+            <th>删除</th>
+        </tr>
+        {%content%}
+    </tbody>
+    </table>
+    
+</body>

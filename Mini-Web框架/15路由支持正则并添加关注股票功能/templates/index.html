@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" type="text/css" href="/css/1.css" />
+
+    <script src="/js/jquery-1.12.4.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function(){
+                $("input[name='toAdd']").each(function(){  
+                    var currentAdd = $(this);  
+                    currentAdd.click(function(){  
+                        code = $(this).attr("systemIdVaule"); 
+                        alert("/add/" + code + ".html"); 
+                        $.get("/add/" + code + ".html", function(data, status){
+                            alert("数据: " + data + "\n状态: " + status);
+                        });
+                    });  
+                });  
+        });
+    </script>
+
+</head>
+<body>
+    <h1>
+        这是主页
+    </h1>
+    <p>
+        <a href="/center.html">个人中心</a>
+    </p>
+    <table>
+        <tbody>
+        <tr>
+            <th>序号</th>
+            <th>股票代码</th>
+            <th>股票简称</th>
+            <th>涨跌幅</th>
+            <th>换手率</th>
+            <th>最新价（元）</th>
+            <th>前期高点</th>
+            <th>前期高点日期</th>
+            <th>添加自选</th>
+        </tr>
+        {%content%}
+    </tbody>
+    </table>
+    
+</body>

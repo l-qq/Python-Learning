@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" type="text/css" href="/css/1.css" />
+
+    <script src="/js/jquery-1.12.4.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#update").click(function(){
+                var item = $("#note_info").val();
+                alert("/update/{%code%}/" + item + ".html");
+                $.get("/update/{%code%}/" + item + ".html", function(data, status){
+                    alert("数据: " + data + "\n状态: " + status);
+                    self.location='/center.html';
+                });
+            });
+        });
+    </script>
+
+</head>
+<body>
+    <h1>
+        正在修改
+    </h1>
+    <p>
+        <a href="/center.html">个人中心</a>
+    </p>
+    
+    <p>
+        {%code%}
+    </p>
+
+    <p>
+        之前的信息：{%note_info%}
+    </p>
+
+    <input id="note_info" type="text" class="form-control" aria-label="Amount (to the nearest dollar)" value="{%note_info%}">
+    
+    <p>
+        <span id="update" class="input-group-addon" style="cursor: pointer">修改</span>
+    </p>
+    
+</body>
