@@ -68,7 +68,7 @@ mysql> select * from df_user \G;
 3. 复制 `.\static\register.html` 到 `.\templates\register.html` 作为模板文件
 4. 修改该模板文件，使用模板变量
 
-   ```
+   ``` powershell
    {% load static %}
    ...
    href="{% static 'css/reset.css' %}"
