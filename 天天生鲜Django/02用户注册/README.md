@@ -68,14 +68,6 @@ mysql> select * from df_user \G;
 3. 复制 `.\static\register.html` 到 `.\templates\register.html` 作为模板文件
 4. 修改该模板文件，使用模板变量
 
-   ``` html
-   模板标签加载 load 静态 static
-   ...
-   href="{% static 'css/reset.css' %}"
-   src="{% static 'images/logo02.png' %}"
-   ...
-   ```
-
 ##### 注册提交功能
 
 1. 修改该 `.\templates\register.html` 模板文件
