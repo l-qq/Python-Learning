@@ -66,17 +66,11 @@ mysql> select * from df_user \G;
 1. 修改视图文件 `.\apps\user\views.py`，添加 `register()` 函数
 2. 修改路由文件 `.\apps\user\urls.py`，添加匹配规则
 3. 复制 `.\static\register.html` 到 `.\templates\register.html` 作为模板文件
-4. 修改该模板文件，使用模板变量
+4. 修改该模板文件，使用模板变量。用 `{% load static %}` 和 `href="{% static 'css/reset.css' %}"` 等
 
 ##### 注册提交功能
 
-1. 修改该 `.\templates\register.html` 模板文件
-
-   ``` html
-   <form method="post" action="/user/register_handle">
-   {% csrf_token %}
-   ```
-
+1. 修改该 `.\templates\register.html` 模板文件。用 `<form method="post" action="/user/register_handle">` 和 `{% csrf_token %}`
 2. 修改视图文件 `.\apps\user\views.py`，添加 `register_handle()` 函数
 3. 修改路由文件 `.\apps\user\urls.py`，添加匹配规则
 
