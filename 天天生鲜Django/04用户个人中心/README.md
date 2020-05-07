@@ -40,7 +40,7 @@ celery.exe -A celery_tasks.tasks worker --loglevel=info --pool solo  # windows�
 
 #### 编写视图 ➕ 路由
 
-编写用户中心的 3 个页面的视图，`UserInfoView``，UserOrderView` 和 `AddressView`，并配置 URL 路由规则
+编写用户中心的 3 个页面的视图，`UserInfoView`，`UserOrderView` 和 `AddressView`，并配置 URL 路由规则
 
 #### 登录装饰器及登陆后页面跳转
 
@@ -65,7 +65,7 @@ LOGIN_URL='/user/login' # 替换默认的/accounts/login这个地址
 
 ##### 精简优化
 
-项目目录下创建 `.\utils` 工具包，新建 `mixin.py` 文件，创建 `LoginRequiredMixin` 类，类中的方法使用 `login_required` 装饰器修饰，然后让需要登录的视图（`UserInfoView``，UserOrderView` 和 `AddressView`）继承该类
+项目目录下创建 `.\utils` 工具包，新建 `mixin.py` 文件，创建 `LoginRequiredMixin` 类，类中的方法使用 `login_required` 装饰器修饰，然后让需要登录的视图（`UserInfoView`，`UserOrderView` 和 `AddressView`）继承该类
 
 #### 编写 LogoutView 视图 ➕ 路由配置
 
@@ -163,7 +163,7 @@ FastDFS 分布式文件存储，海量存储，存储容量扩展方便，而且
    tar -xvzf fastdfs-nginx-module-1.22.tar.gz  # 解压模块
    cd nginx-1.18.0/  # 进入nginx目录
    sudo apt install libpcre3 libpcre3-dev  # 配置nginx前，首先安装依赖PCRE
-   sudo ./configure --prefix=/usr/local/nginx/ --add-module=/home/vm/桌面/fastdfs-nginx-module-1.22/   src/  # 为了让nginx配合fastdfs一起使用，安装nginx的时候添加fastdfs模块，指定nginx的安装位置，指定模块的   绝对路径
+   sudo ./configure --prefix=/usr/local/nginx/ --add-module=/home/vm/桌面/fastdfs-nginx-module-1.22/   src/  # 为了让nginx配合fastdfs一起使用，安装nginx的时候添加fastdfs模块，指定nginx的安装位置，指定模块的绝对路径
    sudo make
    sudo make install
    ```
