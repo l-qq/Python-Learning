@@ -244,3 +244,9 @@ upstream dailyfresh {
 ```
 
 然后指定 `server_name` 为 `dailyfresh`。此时访问网站时，nginx 会依此轮流调用后台的两个 uwsgi 实例
+
+***
+
+BUG 排查
+
+运行 `celery -A celery_tasks.tasks worker --loglevel=info` 时发现任务执行者一端，执行 `generate_static_index_html.delay()` 任务时报错，原来忘记修改 `./templates/staic_base.html` 中的 url 反向解析，改为 `url 'user:order' 1`
