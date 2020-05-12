@@ -283,7 +283,7 @@ type.title_banners = title_banners
       导入我们自己的词语分析类：
       from .ChineseAnalyzer import ChineseAnalyzer
       查找：
-      analyzer=ChineseAnalyzer()
+      analyzer=StemmingAnalyzer()
       替换为：
       analyzer=ChineseAnalyzer()
       ```
